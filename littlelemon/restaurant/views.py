@@ -8,6 +8,9 @@ from rest_framework import generics
 from .models import Menu, BookingTable
 from .serializers import MenuSerializer, BookingTableSerializer
 
+def index(request):
+    return render(request, 'index.html')
+
 # Create your views here.
 class MenuItemView(generics.ListCreateAPIView):
     permission_classes = [IsAuthenticated]
